@@ -1,5 +1,8 @@
 # 🚀 DIO Evolution - Solução de Desafios Iniciais de JavaScript
 
+<img width="1366" height="768" alt="ExercicioJavaScript em HTML" src="https://github.com/user-attachments/assets/0f812c33-ec43-4c2c-a1b8-fe20a965847f" />
+
+
 Este projeto foi desenvolvido como parte da minha jornada na formação **JavaScript Developer da DIO (Digital Innovation One)**. Ele reúne a resolução de três desafios lógicos clássicos, apresentados em uma interface web moderna e intuitiva.
 
 ---
