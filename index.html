@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafios JS | DIO Evolution</title>
+    <style>
+        :root {
+            --bg-color: #050505;
+            --card-bg: #121212;
+            --primary-pink: #e4105d;
+            --accent-yellow: #dfff00;
+            --text-main: #ffffff;
+            --text-muted: #a0a0a0;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            flex: 1;
+        }
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--primary-pink);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+        h1 { color: var(--primary-pink); }
+        span { color: var(--accent-yellow); }
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        input {
+            background: #1a1a1a;
+            border: 1px solid #444;
+            color: white;
+            padding: 12px;
+            width: 100%;
+            margin: 10px 0;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: var(--primary-pink);
+            color: white;
+            border: none;
+            padding: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+            text-transform: uppercase;
+        }
+        #resultado {
+            margin-top: 15px;
+            padding: 15px;
+            border-left: 4px solid var(--accent-yellow);
+            background: #1e1e1e;
+            display: none;
+        }
+        #lgpd {
+            background: #121212;
+            border-top: 2px solid var(--primary-pink);
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .btn-ok {
+            background: var(--accent-yellow);
+            color: black;
+            padding: 5px 15px;
+            margin-left: 15px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>DIO <span>Evolution</span></h1>
+            <p>Solução de Desafios Iniciais de JavaScript</p>
+        </header>
+        <div class="card">
+            <h3>🦆 Desafio dos Patinhos</h3>
+            <input type="number" id="inputPatinhos" placeholder="Quantos patinhos foram passear?">
+            <button onclick="calcular()">Executar Lógica</button>
+            <div id="resultado"></div>
+        </div>
+    </div>
+    <div id="lgpd">
+        🔒 <strong>LGPD:</strong> Este projeto é estritamente educacional e não coleta dados.
+        <div class="btn-ok" onclick="this.parentElement.remove()">ACEITAR</div>
+    </div>
+    <script>
+        function calcular() {
+            const n = document.getElementById('inputPatinhos').value;
+            const res = document.getElementById('resultado');
+            if(n === "") return;
+            let final = (parseInt(n) === -1) ? 0 : n;
+            res.style.display = 'block';
+            res.innerHTML = `<strong>Resultado:</strong> Voltaram <strong>${final}</strong> patinhos.`;
+        }
+    </script>
+</body>
+</html>
